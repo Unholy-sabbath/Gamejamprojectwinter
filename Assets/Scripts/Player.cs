@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     private BoxCollider2D Pc;
     private bool isonLadder = false;
     private bool isclimbing = false;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 void Awake()
@@ -68,6 +69,10 @@ void Awake()
             isonLadder = true;
             rb.gravityScale = 0;
         }
+        if (other.CompareTag("Enemy"))
+        { 
+            TakeDamage(10);
+        }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -76,6 +81,19 @@ void Awake()
             isonLadder = false;
             rb.gravityScale = 1;
         }
+    }
+    private void TakeDamage(int damage)
+    {
+        curHealth -= damage;
+
+        if(curHealth <= 0)
+        {
+            Die();
+        }
+    }
+    private void Die()
+    {
+        Destroy(gameObject);
     }
    public void OnMove(InputAction.CallbackContext context)
     {

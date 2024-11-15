@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6129262806540736856, guid: db4692f62c231a749962b61f761bca5e, type: 3}
+      propertyPath: m_GravityScale
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8115355211429073872, guid: db4692f62c231a749962b61f761bca5e, type: 3}
       propertyPath: m_Name
       value: Penguin
@@ -91,8 +95,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  health: 100
+  health: 30
   damage: 0
-  target: {fileID: 2488121789523584433, guid: 278a5b922b0cd2240aa51f6a23cec334, type: 3}
-  speed: 0
-  health: 0
+  direction: {x: 1, y: 0}

@@ -6,7 +6,7 @@ public class Penguin : MonoBehaviour
     public float health = 100f;
     public int damage = 10;
 
-    public Transform target;  
+  /*  public Transform target;  
      Rigidbody2D rb;
 
      bool isDead = false;
@@ -36,7 +36,24 @@ public class Penguin : MonoBehaviour
         direction.Normalize();
         rb.velocity = direction * speed * Time.deltaTime;
     }
+    */
+    
+    public Vector2 direction = Vector2.right;  
 
+    void Update()
+    {
+        
+        transform.Translate(direction * speed * Time.deltaTime);
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            TakeDamage(10);
+
+            Destroy(collision.gameObject);
+        }
+    }
     public void TakeDamage(float damage)
     {
         health -= damage;
