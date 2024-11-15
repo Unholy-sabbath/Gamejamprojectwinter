@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Frost Bunker generator_0: -7864472045541384558
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

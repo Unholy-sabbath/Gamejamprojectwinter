@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      paralax background gamejam layer2_0: -154941044983766380
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

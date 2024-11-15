@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GSGlock19PistolExtAmmo_0: 6367556573146488010
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

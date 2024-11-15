@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GSAK47Rifle_0: -1286646355795054475
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

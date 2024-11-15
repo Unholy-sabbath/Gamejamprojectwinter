@@ -297,7 +297,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GSFlamethrowerFire_0: -5379890292933009462
+      GSFlamethrowerFire_1: 4833355822071840955
+      GSFlamethrowerFire_2: -1994169572201096209
+      GSFlamethrowerFire_3: 5275023200868383036
+      GSFlamethrowerFire_4: -7862198256685871380
+      GSFlamethrowerFire_5: -3109365573550027243
+      GSFlamethrowerFire_6: 4500521515443116390
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

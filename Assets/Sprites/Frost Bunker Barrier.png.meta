@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Frost Bunker Barrier_0: -2261432065332171259
+      Frost Bunker Barrier_1: 5243108109041124675
+      Frost Bunker Barrier_2: -3523364877056398822
+      Frost Bunker Barrier_3: -4190118704251935619
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

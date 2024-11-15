@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      paralax background gamejam sky_0: 3888477459077997356
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

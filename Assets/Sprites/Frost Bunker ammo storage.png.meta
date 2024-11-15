@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Frost Bunker ammo storage_0: 8861632379057021058
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

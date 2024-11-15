@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GSKusaSaiga12ShotgunAmmo_0: 2324614083227929776
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

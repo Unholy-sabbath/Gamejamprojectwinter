@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GSKusaSaiga12ShotgunBullet_0: 7628392914578860712
+      GSKusaSaiga12ShotgunBullet_1: -7782807014674878306
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
