@@ -2031,7 +2031,7 @@ GameObject:
   - component: {fileID: 1251472986}
   - component: {fileID: 1251472985}
   - component: {fileID: 1251472984}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square (13)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2237,7 +2237,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 8115355211429073872, guid: db4692f62c231a749962b61f761bca5e, type: 3}
+  - {fileID: 8726801260914522774, guid: 89144441be496ea4cac6eeb93d00064c, type: 3}
+  - {fileID: 2492823845165021974, guid: ceeb5bd43f5356842a3bd98094022b73, type: 3}
+  - {fileID: 1816945919570479228, guid: e5883fbfb140bd147b2b004cca3141f7, type: 3}
+  player: {fileID: 356380685}
   spawner: {fileID: 1598879554}
   waveTime: 10
   Baddiesperwave: 5

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &685773183741454662
+--- !u!1001 &7613509162068106156
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,10 +8,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -4172803712929926771, guid: db4692f62c231a749962b61f761bca5e, type: 3}
-      propertyPath: speed
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 1950820954493193201, guid: db4692f62c231a749962b61f761bca5e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -52,18 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6129262806540736856, guid: db4692f62c231a749962b61f761bca5e, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 8115355211429073872, guid: db4692f62c231a749962b61f761bca5e, type: 3}
       propertyPath: m_Name
-      value: Penguin
+      value: Wollybearmoth
       objectReference: {fileID: 0}
-    - target: {fileID: 8116436499756242153, guid: db4692f62c231a749962b61f761bca5e, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
     m_RemovedComponents:
     - {fileID: -4172803712929926771, guid: db4692f62c231a749962b61f761bca5e, type: 3}
     m_RemovedGameObjects: []
@@ -71,28 +59,28 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8115355211429073872, guid: db4692f62c231a749962b61f761bca5e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -3439296326474344218}
+      addedObject: {fileID: -1950445639577741988}
   m_SourcePrefab: {fileID: 100100000, guid: db4692f62c231a749962b61f761bca5e, type: 3}
---- !u!1 &8726801260914522774 stripped
+--- !u!1 &1816945919570479228 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8115355211429073872, guid: db4692f62c231a749962b61f761bca5e, type: 3}
-  m_PrefabInstance: {fileID: 685773183741454662}
+  m_PrefabInstance: {fileID: 7613509162068106156}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-3439296326474344218
+--- !u!114 &-1950445639577741988
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8726801260914522774}
+  m_GameObject: {fileID: 1816945919570479228}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c7ba200fee04e84280182d222d90b6b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b2b156b001fd5c4a8eec61f4af58ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  health: 100
-  damage: 0
-  target: {fileID: 2488121789523584433, guid: 278a5b922b0cd2240aa51f6a23cec334, type: 3}
   speed: 0
-  health: 0
+  health: 200
+  damage: 0
+  target: {fileID: 0}
+  moveSpeed: 1.5
+  health: 300

@@ -2,17 +2,18 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject[] enemyPrefabs;
-    public Transform spawner;
-    public float waveTime = 60f;
-    public float Baddiesperwave = 5;
-    private float lastwavetime;
-    private bool spawning = false;
-    private bool firstwaveTime;
+    public GameObject[] enemyPrefabs; 
+    public Transform player;         
+    public Transform spawner;         
+    public float waveTime = 60f;      
+    public float Baddiesperwave = 5; 
+    private float lastwavetime;       
+    private bool spawning = false;    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        lastwavetime = 0f;
     }
 
     // Update is called once per frame
@@ -30,14 +31,30 @@ public class Spawner : MonoBehaviour
 
     void SpawnWave()
     {
+        
         for (int i = 0; i < Baddiesperwave; i++)
         {
-            GameObject enemyTospawn= enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
+           
+            GameObject enemyTospawn = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
 
-            Vector2 Spawnerpoint = new Vector2(spawner.position.x, spawner.position.y) + new Vector2(Random.Range(-3f, 3f), Random.Range(-3,3f));
+            
+            Vector2 Spawnerpoint = (Vector2)spawner.position + new Vector2(Random.Range(-3f, 3f), Random.Range(-3f, 3f));
 
-            Instantiate(enemyTospawn, Spawnerpoint, Quaternion.identity);
+            
+            GameObject enemy = Instantiate(enemyTospawn, Spawnerpoint, Quaternion.identity);
+
+            
+            Enemy enemyScript = enemy.GetComponent<Enemy>();
+
+            
+            if (enemyScript != null)
+            {
+                
+                enemyScript.SetTarget(player);
+            }
         }
+
+        
         spawning = false;
     }
 }

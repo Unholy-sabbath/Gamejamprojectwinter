@@ -12,109 +12,46 @@ public class Enemy : MonoBehaviour
     protected bool isDead = false;
 
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-   protected virtual void Start()
+    
+  protected virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+    }
 
     
-    GameObject player = GameObject.FindGameObjectWithTag("Player");
-    if (player != null)
+    public void SetTarget(Transform newTarget)
     {
-        target = player.transform;
-    }
-      
+        target = newTarget;
     }
 
-    // Update is called once per frame
     protected virtual void Update()
     {
-        if (isDead) return;
+        if (target == null) return;  
         Movetowards();
     }
+
     protected virtual void Movetowards()
     {
         Vector2 direction = target.position - transform.position;
         direction.Normalize();
-        rb.velocity = direction * speed;
+        rb.velocity = direction * speed * Time.deltaTime;
     }
 
-   public void TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
         health -= damage;
-        if (health < 0f)
+        if (health <= 0f)
         {
             Die();
         }
     }
-  protected virtual void Die()
-    {
-        isDead = true;
 
+    protected virtual void Die()
+    {
         Destroy(gameObject);
     }
 }
-   /* public class Penguin : Enemy
-    
-    {
-        public float speed = 3f;
-        public float health = 100f;
-    
-    protected override void Start()
-    {
-        base.Start();
-    }
-
-    protected override void Update()
-    {
-        base.Update();
-    }
-
-    protected override void Die()
-    {
-        base.Die();
-    }
-    }
-    */
-public class Fox : Enemy
-
-{
-    public float speed = 15f;
-    public float health = 60f;
-
-protected override void Start()
-{
-    base.Start();
-    }
-    protected override void Update()
-    {
-        base.Update();
-        }
-        protected override void Die()
-        {
-            base.Die();
-        }
-}
+   
 
 
-public class Wollybearmoth : Enemy
-{
 
-     public float moveSpeed = 1.5f; 
-     public float health = 300f;    
-
-    protected override void Start()
-    {
-        base.Start();  
-    }
-
-    protected override void Update()
-    {
-        base.Update(); 
-    }
-
-    protected override void Die()
-    {
-        base.Die();
-}
-}

@@ -2,26 +2,53 @@ using UnityEngine;
 
 public class Penguin : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is createdpublic class Penguin : Enemy
+    public float speed = 10f;
+    public float health = 100f;
+    public int damage = 10;
+
+    public Transform target;  
+     Rigidbody2D rb;
+
+     bool isDead = false;
+
     
-    public class penguin : Enemy
-    {
-        public float speed = 3f;
-        public float health = 100f;
     
-    protected override void Start()
+    void Start()
     {
-        base.Start();
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    protected override void Update()
+    
+    public void SetTarget(Transform newTarget)
     {
-        base.Update();
+        target = newTarget;
     }
 
-    protected override void Die()
+     void Update()
     {
-        base.Die();
+        if (target == null) return;  
+        Movetowards();
     }
+
+     void Movetowards()
+    {
+        Vector2 direction = target.position - transform.position;
+        direction.Normalize();
+        rb.velocity = direction * speed * Time.deltaTime;
+    }
+
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+        if (health <= 0f)
+        {
+            Die();
+        }
+    }
+
+     void Die()
+    {
+        Destroy(gameObject);
     }
 }
+
